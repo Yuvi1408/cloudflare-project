@@ -22,8 +22,8 @@ app.use('*', async (c, next) => {
   await next();
 });
 
-// Route for username validation
-app.post('/api/validate-username', async (c) => {
+// Route for username validation (FIXED: removed /api prefix)
+app.post('/validate-username', async (c) => {
   const { username } = c.req.body;
   if (!username) {
     return c.json({ available: false, message: "Username is required." }, 400);
@@ -32,8 +32,8 @@ app.post('/api/validate-username', async (c) => {
   return c.json({ available: !isTaken });
 });
 
-// Route for form submission
-app.post('/api/submit-form', async (c) => {
+// Route for form submission (FIXED: removed /api prefix)
+app.post('/submit-form', async (c) => {
   const { username, email, password } = c.req.body;
 
   // Basic validation (more complex validation can be added)
