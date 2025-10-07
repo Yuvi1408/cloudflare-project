@@ -1,0 +1,16 @@
+{
+  "name": "cloudflare-fullstack-form",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler pages deploy ./public"
+  },
+  "dependencies": {
+    "hono": "^4.4.6",
+    "bcryptjs": "^2.4.3",
+    "express-validator": "^7.2.1"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
